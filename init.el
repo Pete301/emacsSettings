@@ -33,3 +33,19 @@
 ;; nXML mode
 (setq nxml-child-indent 4
       nxml-attribute-indent 4)
+
+;; Grep
+(setq grep-program "D:/Applications/GnuWin32/bin/grep")
+
+;; Set Omnisharp variables
+(require 'omnisharp)
+(setq omnisharp-server-executable-path "D:/Applications/OmniSharp-Server/OmniSharp/bin/Release/OmniSharp.exe")
+(setq omnisharp--curl-executable-path "D:/Applications/Curl/curl-7.45.0-win32-mingw/bin/curl.exe")
+
+;; Custom key-bindings
+
+;; Omnisharp key-bindings
+(global-set-key (kbd "C-x j o") 'omnisharp-mode)
+(progn
+  (require 'omnisharp
+		   (define-key omnisharp-mode-map (kbd "M-a") 'omnisharp-auto-complete)))
